@@ -24,7 +24,7 @@ public void Main(string argument) {
 
     if(sensor.IsActive) {
 		if(pistonIn) {
-			color = new Color(0, 255, 0);
+			color = new Color(255, 0, 0);
 			reflectorLight.SetValue("Color", color);
 		
 			pistonBase.GetActionWithName("Reverse").Apply(pistonBase);
@@ -32,7 +32,7 @@ public void Main(string argument) {
 		}
     } else {
 		if(!pistonIn) {
-			color = new Color(255, 0, 0);
+			color = new Color(0, 255, 0);
 			reflectorLight.SetValue("Color", color);
 		
 			pistonBase.GetActionWithName("Reverse").Apply(pistonBase);

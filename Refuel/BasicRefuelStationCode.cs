@@ -5,6 +5,7 @@
 private IMyPistonBase pistonBase;
 private IMySensorBlock sensor;
 private IMyReflectorLight reflectorLightOne;
+private IMyReflectorLight reflectorLightTwo;
 private Color color;
 private bool pistonIn = true;
 

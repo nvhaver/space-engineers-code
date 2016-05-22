@@ -111,7 +111,6 @@ private void setTextPanelTextColor(IMyTextPanel textPanel, Color color) {
 }
 
 //Create dictionary for the production materials
-//private void createMaterialDictionary(List<IMyTerminalBlock> materialList, IMyInventoryOwner inventoryOwner, IMyInventory inventory, List<IMyInventoryItem> inventoryItems, Dictionary<string, VRage.MyFixedPoint> oresAndValues){
 private void createMaterialDictionary(List<IMyTerminalBlock> materialList, Dictionary<string, VRage.MyFixedPoint> oresAndValues) {
 	for(int i = 0; i < materialList.Count; i++) {
 		IMyInventoryOwner inventoryOwner = materialList[i] as IMyInventoryOwner;

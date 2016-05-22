@@ -28,7 +28,7 @@ public Program() {
 	textPanelTwo = GridTerminalSystem.GetBlockWithName("TextPanelTwo") as IMyTextPanel;
 	textPanelThree = GridTerminalSystem.GetBlockWithName("TextPanelThree") as IMyTextPanel;
 	
-    GridTerminalSystem.GetBlocksOfType<IMyCargoContainer>(allCargoContainers);
+	GridTerminalSystem.GetBlocksOfType<IMyCargoContainer>(allCargoContainers);
 	GridTerminalSystem.GetBlocksOfType<IMyRefinery>(allRefineries);
 }
 

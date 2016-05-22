@@ -24,7 +24,7 @@ private string cargoInventorySpace = "CargoInventory\n--------------------------
 
 //Constructor
 public Program() {
-    textPanelOne = GridTerminalSystem.GetBlockWithName("TextPanelOne") as IMyTextPanel;
+	textPanelOne = GridTerminalSystem.GetBlockWithName("TextPanelOne") as IMyTextPanel;
 	textPanelTwo = GridTerminalSystem.GetBlockWithName("TextPanelTwo") as IMyTextPanel;
 	textPanelThree = GridTerminalSystem.GetBlockWithName("TextPanelThree") as IMyTextPanel;
 	

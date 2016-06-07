@@ -8,11 +8,15 @@ private List<IMyTerminalBlock> allRefineries = new List<IMyTerminalBlock>();
 private List<IMyTerminalBlock> productionMatList = new List<IMyTerminalBlock>();
 private List<IMyTerminalBlock> rawMatList = new List<IMyTerminalBlock>();
 
+private List<IMyTerminalBlock> indicatorSpotList = new List<IMyTerminalBlock>();
+
 private string prefixProduction = "ProductionMat"; 
 private string prefixRaw = "RawMat";
 private string prefixProductionRef = "ProductionRef";
+private string prefixProductionIndicatorLight = "ProductionMatIndicatorLight";
 
 private Color colorRed = new Color(175, 0, 0);
+private Color colorGreen = new Color(0, 175, 0);
 private Color colorWhite = new Color(255, 255, 255);
 
 private string[] oreNames = new string[] {"Iron", "Silicon", "Nickel", "Cobalt", "Magnesium", "Uranium", "Gold", "Silver", "Platinum", "Stone"};
@@ -27,13 +31,14 @@ public Program() {
 	textPanelOne = GridTerminalSystem.GetBlockWithName("TextPanelOne") as IMyTextPanel;
 	textPanelTwo = GridTerminalSystem.GetBlockWithName("TextPanelTwo") as IMyTextPanel;
 	textPanelThree = GridTerminalSystem.GetBlockWithName("TextPanelThree") as IMyTextPanel;
-	
-	GridTerminalSystem.GetBlocksOfType<IMyCargoContainer>(allCargoContainers);
-	GridTerminalSystem.GetBlocksOfType<IMyRefinery>(allRefineries);
 }
 
 //Main method
 public void Main(string argument) {	
+	
+	//Get all blocks of a specific type on the grid
+	GridTerminalSystem.GetBlocksOfType<IMyCargoContainer>(allCargoContainers);
+	GridTerminalSystem.GetBlocksOfType<IMyRefinery>(allRefineries);
 		
 	//Create lists from the storage blocks and get inventoryspace
 	for(int i = 0; i < allCargoContainers.Count; i++) {		
@@ -59,7 +64,7 @@ public void Main(string argument) {
 	writeToDisplay(textPanelOne, createInventorySpaceString(productionMatList, cargoInventorySpace));
 	
 	//Clear all
-	cargoInventorySpace = "CargoInventory\n---------------------------------------------\n";
+	cargoInventorySpace = "Cargo Inventory Space\n---------------------------------------------\n";
 	
 	//###DISPLAY TWO###
 	
